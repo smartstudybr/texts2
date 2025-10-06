@@ -8,14 +8,37 @@
 
 :root {
 	font-size: 12px;
-	--color-text: #131313;
+	--color-text: #1351B4;
 	--color-bg: #fff;
-	--color-link: #131313;
-	--color-link-hover: #131313;
+	--color-link: #0C326F;
+	--color-link-hover: #0C326F;
 	--page-padding-y: 2.5rem;
 	--page-padding-x: 4rem;
 }
+.img-bg{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	position:absolute;
+	z-index:-1000;
+	left:0;
+	top:0;
+}
+.imagem{
+	width: 100%;
+  height: 100%;       /* take full container height */
+  object-fit: cover;
+  filter: brightness(0) invert(1);
+  opacity: 0.25;
+  
+}
 
+.divider{
+
+  border-bottom: 1px solid #1351B4; /* Creates a 1px solid gray line at the bottom */
+  margin: 20px 0; /* Adds spacing above and below the divider */
+
+}
 body {
 	margin: 0;
 	color: var(--color-text);
@@ -23,7 +46,7 @@ body {
 	font-family: -apple-system, Rawline,BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: radial-gradient(ellipse at top, #eee9dd, #eee9dd);
+	background: radial-gradient(ellipse at top, #EDF5FF, #D4E5FF);
 	background-size: 100% 100vh;
 	background-attachment: fixed;
 }
@@ -68,6 +91,7 @@ a:focus-visible {
 	outline: 2px solid red;
 	background: transparent;
 }
+
 
 .frame {
 	position: relative;
@@ -137,14 +161,19 @@ a:focus-visible {
 	font-size: clamp(1.5rem,6vw,2.25rem);
 	letter-spacing: -0.025em;
   text-wrap: balance;
+  position: relative;
 }
-
+.bg-blue{
+	  background-color: #D4E5FF;
+}
 .content--img {
 	background-size: cover;
 	background-position: 50% 50%;
 	min-height: 80vh;
 	width: 100%;
 	margin: 30vh 0;
+	filter: brightness(0) invert(1);
+	/* filter: grayscale(1) contrast(2) brightness(1); */
 }
 
 .content--intro {
@@ -160,15 +189,17 @@ a:focus-visible {
 }
 
 .content h2 {
-	font-size: clamp(3rem,8vw,10rem);
-	font-weight: 600;
-	font-family: "ivyora-display", serif;
+	font-size: 5rem;
+	font-weight: 200;
+	/* font-family: "ivyora-display", serif; */
 	margin: 0;
 	line-height: 0.9;
 }
-
+.last{
+	margin-bottom: 10vh;
+}
 .space {
-	margin-bottom: 80vh;
+	margin-bottom: 20vh;
 }
 
 .content a {
